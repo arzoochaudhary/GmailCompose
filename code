@@ -4,3 +4,13 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+
+/* to open chrome */
+public class TestGmail 
+{
+ static
+ {
+  System.setProperty("webdriver.chrome.driver", "./DriverPath/chromedriver.exe");
+  
+ }
+}

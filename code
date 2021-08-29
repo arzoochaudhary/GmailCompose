@@ -13,4 +13,23 @@ public class TestGmail
   System.setProperty("webdriver.chrome.driver", "./DriverPath/chromedriver.exe");
   
  }
+  public static void main(String[] args) throws InterruptedException 
+ {
+  ChromeDriver driver = new ChromeDriver();
+  driver.manage().window().maximize();
+  
+  /* open gmail.com */
+  driver.get("https://www.gmail.com");
+  
+  driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+  
+  /* login to the gmail account */
+  WebElement username = driver.findElement(By.xpath("//input[@type='email']"));
+  username.sendKeys("arzoochaudhary9545@gmail.com");
+  
+  driver.findElement(By.xpath("//span[@class='RveJvd snByac']")).click();
+  
+  WebElement pwd = driver.findElement(By.xpath("//input[@name='password']"));
+  Thread.sleep(1000);
+  
 }
